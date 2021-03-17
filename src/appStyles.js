@@ -73,4 +73,7 @@ export default makeStyles((theme) => ({
         height: '35vmin',
         },
     },
+    background: {
+        background: 'linear-gradient(#0000FF, #FFFFFF)',
+    },
 }));

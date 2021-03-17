@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
 import alanBtn from '@alan-ai/alan-sdk-web';
 import wordsToNumbers from 'words-to-numbers';
 
@@ -10,7 +9,6 @@ const alanKey = '85237a5ee2b56daea3c94759cb754e7f2e956eca572e1d8b807a3e2338fdd0d
 
 const App = () => {
     const classes = useStyles();
-    const history = useHistory();
 
     // hooks in square brackets
     // news articles
@@ -44,7 +42,8 @@ const App = () => {
     }, []);
 
     const home = () => {
-        history.push('/');
+        setNewsArticles([]);
+        setActiveArticle(-1);
     };
 
     return (
